@@ -1,30 +1,24 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/vue.svg">
+    <HelloWorld msg="Vue.js 앱에 오신 것을 환영합니다!" />
+    <MyButton />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import HelloWorld from './components/HelloWorld.vue';
+import MyButton from './components/MyButton.vue';
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld,
+    MyButton
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+</script>
+
+<style>
+/* 글로벌 스타일을 여기에 추가할 수 있습니다. */
 </style>
